@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #* 
-#* Ver 0.3
+#* Ver 0.4
 #* For python version 2.7 script dump all databases
 #*
 #
@@ -51,12 +51,14 @@ for basename in ALL_DATABASES:
      ALL_TABLES = mysql("SHOW TABLES",basename)
      print "--- ALL_TABLE_NAME: ---"
      for table in ALL_TABLES:
-        print "    "+re.sub("[)(',]","",str(table)) # the brackets are deleted from ALL_TABLES
-     print
-     # create dump
-     subprocess.call("mysqldump --ignore-table=mysql.event --skip-opt -h"+HOST+" -u"+USER+" -p"+PASSWD+" "+basename+" > "+basename+"/"+basename+".sql", shell=True)
+        tablename = re.sub("[)(',]","",str(table))
+        print "    "+tablename # the brackets are deleted from ALL_TABLES
+        # create dump
+        if tablename == 'event' and basename == 'mysql':
+            continue
+        subprocess.call("mysqldump --ignore-table=mysql.event --skip-opt -h"+HOST+" -u"+USER+" -p"+PASSWD+" "+basename+" "+tablename+" > "+basename+"/"+tablename+".sql", shell=True)
 
-print "**********************************************"
+     print
 print
 
 #
