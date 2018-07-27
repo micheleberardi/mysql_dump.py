@@ -1,6 +1,6 @@
 # Project Title
 
-Script to dump Mysql Database
+Simple Script to do dump on mysql 
 
 ### Prerequisites
 ```
@@ -23,7 +23,7 @@ git@github.com:micheleberardi/mysql_dump.py.git
 
 ## Running
 
-python mysql_dump.py.git
+python mysql_dump.py
 
 
 ## Authors
