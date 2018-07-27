@@ -4,13 +4,10 @@ Simple Script to do dump on mysql
 
 ### Prerequisites
 ```
-import MySQLdb
-import string
-import subprocess
-import re
 import os
+import subprocess
+import logging
 import sys
-import datetime
 
 ```
 
@@ -18,12 +15,11 @@ import datetime
 
 Download the file with git 
 
-git@github.com:micheleberardi/mysql_dump.py.git
-
+git@github.com:micheleberardi/rsync_code.py.git
 
 ## Running
 
-python mysql_dump.py
+python rsync_code.py
 
 
 ## Authors
