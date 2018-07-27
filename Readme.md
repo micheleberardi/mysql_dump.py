@@ -26,4 +26,4 @@ python rsync_code.py
 
 * **Michele Berardi** -- [MicheleBerardi](https://github.com/micheleberardi)
 
-* **please feel free to reach out with any questions
+* Please feel free to reach out with any questions
